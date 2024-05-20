@@ -14,7 +14,7 @@ export default {
   },
   data() {
     return {
-      str: '永历八年春,永历八年春永历八年春'
+      str: '见多识广察言观色高瞻远瞩'
     }
   },
 
@@ -28,7 +28,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .word_content {
-  width: 200px;
+  width: 250px;
   display: flex;
   flex-wrap: wrap;
 }

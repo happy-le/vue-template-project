@@ -1,6 +1,6 @@
 <template>
   <div class="word_cell_main_content">
-    <slot />
+    <span><slot /></span>
   </div>
 </template>
 
@@ -15,6 +15,11 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@font-face {
+  font-family: JXP;
+  src: url(../JXP-.ttf)  format('truetype');
+}
+
 .word_cell_main_content {
   --cell_color: rgba(255, 0, 0, 0.6);
 
@@ -29,15 +34,24 @@ export default {
   border-bottom-width: 2px;
   border-left-width: 2px;
 
-  text-align: center;
-  line-height: 50px;
-  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  &:nth-child(3n) {
+  span {
+    font-size: 35px;
+    font-family: JXP;
+    font-weight: bold;
+    position: relative;
+    // top: 4px;
+    opacity: 0.8;
+  }
+
+  &:nth-child(4n) {
     border-right-width: 2px;
   }
-  
-  &:nth-child(-n + 3) {
+
+  &:nth-child(-n + 4) {
     border-top-width: 2px;
   }
 
