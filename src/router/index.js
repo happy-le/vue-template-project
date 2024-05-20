@@ -6,10 +6,22 @@ const router = createRouter({
     {
       path: '/',
       name: 'HelloWorld',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/HelloWorld.vue')
+      redirect: '/Calligraphy'
+    },
+    {
+      path: '/ProgressRing',
+      name: 'ProgressRing',
+      component: () => import('../views/ProgressRing/HelloWorld.vue')
+    },
+    {
+      path: '/StudyTool',
+      name: 'StudyTool',
+      component: () => import('../views/StudyTool/StudyTool.vue')
+    },
+    {
+      path: '/Calligraphy',
+      name: 'Calligraphy',
+      component: () => import('../views/Calligraphy/indexPage.vue')
     }
   ]
 })
