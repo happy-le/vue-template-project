@@ -5,25 +5,20 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      word: '永'
-    }
-  },
-  methods: {}
-}
+export default {}
 </script>
+
 <style lang="scss" scoped>
 @font-face {
-  font-family: JXP;
+  font-family: JXP; // 字体
   src: url(../JXP-.ttf) format('truetype');
 }
 
 .word_cell_main_content {
-  --cell_color: rgba(255, 0, 0, 0.6);
-  --cell-width: 145px;
-  --cell-border-width: 4px;
+  --cell_color: rgba(255, 0, 0, 0.8); // 格子边框颜色
+  --cell_diagonal_color: rgba(255, 0, 0, 0.3); // 格子对角线颜色
+  --cell-width: 145px; // 格子宽度
+  --cell-border-width: 4px; // 格子边框宽度
 
   position: relative;
   width: var(--cell-width);
@@ -41,11 +36,12 @@ export default {
   justify-content: center;
 
   span {
+    color: rgba(0, 0, 0, 0.4); // 文字颜色
     font-size: 100px;
     font-family: JXP;
-    font-weight: bold;
+    // font-weight: bolder;
     position: relative;
-    // top: 4px;
+    // top: 4px; // 文字偏移
     opacity: 0.8;
   }
 
@@ -67,7 +63,7 @@ export default {
     width: calc(var(--cell-width) * 2);
     height: 0px;
     border-style: dashed;
-    border-color: var(--cell_color);
+    border-color: var(--cell_diagonal_color);
     border-width: 0 0 var(--cell-border-width) 0;
   }
 
