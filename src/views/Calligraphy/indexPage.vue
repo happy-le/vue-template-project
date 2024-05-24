@@ -15,8 +15,8 @@ export default {
   },
   data() {
     return {
-      pageLen: 9 * 13, // 每页纸张的格子数
-      str: text.text2 // 待生成的文字
+      pageLen: 8 * 12, // 每页纸张的格子数
+      str: text.text3 // 待生成的文字
     }
   },
 
@@ -38,10 +38,11 @@ export default {
   align-content: flex-start;
   flex-wrap: wrap;
 
-  // border: 1px solid;
-  padding: 150px 0px 0px 300px; // 页边距
+  padding: 140px 40px 150px 180px; // 页边距
+  box-sizing: border-box;
 
-  // transform: scale(0.3, 0.3);
+  border: 1px solid;
+  transform: scale(0.3, 0.3);
   transform-origin: 0 0;
 }
 </style>

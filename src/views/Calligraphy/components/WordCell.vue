@@ -45,11 +45,11 @@ export default {}
     opacity: 0.8;
   }
 
-  &:nth-child(9n) {
+  &:nth-child(8n) {
     border-right-width: var(--cell-border-width);
   }
 
-  &:nth-child(-n + 9) {
+  &:nth-child(-n + 8) {
     border-top-width: var(--cell-border-width);
   }
 
