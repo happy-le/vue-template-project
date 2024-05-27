@@ -11,7 +11,7 @@ export default {}
 <style lang="scss" scoped>
 @font-face {
   font-family: JXP; // 字体
-  src: url(../JXP-.ttf) format('truetype');
+  src: url(../assets/JXP-.ttf) format('truetype');
 }
 
 .word_cell_main_content {
