@@ -36,6 +36,7 @@ export default {}
   justify-content: center;
 
   span {
+    z-index: 1; // 文字的层级要比对角线高
     color: rgba(0, 0, 0, 0.4); // 文字颜色
     font-size: 100px;
     font-family: JXP;
@@ -55,10 +56,10 @@ export default {}
 
   &::before,
   &::after {
+    z-index: 0;
     content: '';
     position: absolute;
     top: 0;
-    z-index: -1;
 
     width: calc(var(--cell-width) * 2);
     height: 0px;
