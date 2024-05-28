@@ -1,14 +1,19 @@
 <template>
   <div>
-    <div class="page_list_content">
-      <PgaeItem v-for="(item, index) in pageTextArr" :key="index" :str="item" />
+    <el-button type="primary" @click="download">下载</el-button>
+    <div class="page_list_content" id="pdfDom">
+      <div :id="`page_index_${index + 1}`" v-for="(item, index) in pageTextArr" :key="index">
+        <PgaeItem :str="item" />
+      </div>
     </div>
+
   </div>
 </template>
 
 <script>
 import PgaeItem from './components/PgaeItem.vue'
 import text from './assets/text'
+import { loadFile } from './assets/loadFile.js'
 
 export default {
   components: {
@@ -17,7 +22,7 @@ export default {
   data() {
     return {
       pageLen: 8 * 12, // 每页纸张的格子数
-      allText: text.text, // 待生成的文字
+      allText: text.text2, // 待生成的文字
       pageTextArr: []
     }
   },
@@ -44,6 +49,10 @@ export default {
           this.allText + new Array(this.pageLen - this.allText.length).fill(' ').join('')
         )
       }
+    },
+
+    download() {
+      loadFile()
     }
   }
 }
@@ -55,10 +64,8 @@ export default {
   flex-wrap: wrap;
   padding: 20px;
 
-
   background: #f5f7fa;
   border: 1px solid var(--el-border-color);
   border-radius: 4px;
-
 }
 </style>
