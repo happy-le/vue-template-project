@@ -2,7 +2,7 @@
   <div>
     <el-button type="primary" @click="download">下载</el-button>
     <div class="page_list_content" id="pdfDom">
-      <div :id="`page_index_${index + 1}`" v-for="(item, index) in pageTextArr" :key="index">
+      <div :id="`page_index_${index + 1}`" class="page_item" v-for="(item, index) in pageTextArr" :key="index">
         <PgaeItem :str="item" />
       </div>
     </div>
@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       pageLen: 8 * 12, // 每页纸张的格子数
-      allText: text.text2, // 待生成的文字
+      allText: text.text, // 待生成的文字
       pageTextArr: []
     }
   },
@@ -52,7 +52,8 @@ export default {
     },
 
     download() {
-      loadFile()
+      const pageListDom = document.getElementsByClassName("page_item")
+      loadFile(pageListDom)
     }
   }
 }
@@ -67,5 +68,10 @@ export default {
   background: #f5f7fa;
   border: 1px solid var(--el-border-color);
   border-radius: 4px;
+
+  .page_item {
+    zoom: 0.2;
+    margin: 12px;
+  }
 }
 </style>

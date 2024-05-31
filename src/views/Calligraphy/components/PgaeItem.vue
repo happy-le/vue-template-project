@@ -35,20 +35,13 @@ export default {
   flex-shrink: 0;
   width: 1480px; // 纸张宽度 14.8cm * 100
   height: 2100px; // 纸张高度 21.0cm * 100
-  // margin: 12px;
   position: relative;
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
-  // background-color: #e4ffe1;
   background-color: #ffffff;
 
   padding: 140px 40px 150px 180px; // 页边距
   box-sizing: border-box;
-
-  // border: 1px solid;
-  // zoom: 0.2;
-  // transform: scale(0.1, 0.1);
-  // transform-origin: 0 0;
 }
 </style>
